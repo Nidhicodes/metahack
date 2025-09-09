@@ -57,19 +57,7 @@ SourceSense is a data source application built using the Atlan Apps Framework. I
    - **Web Interface:** http://localhost:8000
    - **Temporal UI:** http://localhost:8233
 
-## Project Structure
 
-```
-sourcesense/
-├── app/                # Core application logic
-│   ├── activities.py   # Workflow activities
-│   ├── workflow.py     # Workflow definitions
-│   └── github_client.py# GitHub API client
-├── frontend/           # Frontend assets
-│   ├── static/         # Static files (CSS, JS)
-│   └── templates/      # HTML templates
-├── local/              # Local data storage
-├── deploy/             # Installation and deployment files
 ├── tests/              # Test files
 ├── main.py             # Application entry point
 ├── pyproject.toml      # Dependencies and config

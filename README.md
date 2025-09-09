@@ -58,8 +58,3 @@ SourceSense is a data source application built using the Atlan Apps Framework. I
    - **Temporal UI:** http://localhost:8233
 
 
-├── tests/              # Test files
-├── main.py             # Application entry point
-├── pyproject.toml      # Dependencies and config
-└── README.md           # This file
-```

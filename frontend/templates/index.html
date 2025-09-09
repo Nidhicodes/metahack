@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SourceSense - GitHub Metadata Extractor</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>SourceSense</h1>
+        <p>Enter a GitHub repository URL to extract its metadata.</p>
+        <form action="/extract" method="post">
+            <input type="text" name="repo_url" placeholder="https://github.com/owner/repo" required>
+            <button type="submit">Extract Metadata</button>
+        </form>
+
+        {% if result %}
+        <div class="results">
+            <h2>Extraction Results</h2>
+            <h3>Repository Details</h3>
+            <pre>{{ result.repo_details | tojson(indent=4) }}</pre>
+            <h3>README</h3>
+            <pre>{{ result.readme_content }}</pre>
+            <h3>File Tree</h3>
+            <pre>{{ result.file_tree | tojson(indent=4) }}</pre>
+        </div>
+        {% endif %}
+
+        {% if error %}
+        <div class="error">
+            <h2>Error</h2>
+            <p>{{ error }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
